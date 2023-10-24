@@ -23,10 +23,15 @@ class SumaPadre extends Component {
     this.setState({ total: this.state.total + numeroSeleccionado });
   };
 
+  renderCambia = () => {
+      alert("el render ha cambiado");
+  };
+
   render() {
     return (
       <div>
         <h1>Suma: {this.state.total}</h1>
+        {this.renderCambia()}
         <button onClick={() => this.generarNumero()}>Generar Número</button>
         <hr></hr>
         {
